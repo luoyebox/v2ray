@@ -1,12 +1,11 @@
 FROM alpine:latest
 
-# ENV CONFIG_JSON=none 
-ENV CERT_PEM=none KEY_PEM=none VER=3.48
+ENV CONFIG_JSON=none CERT_PEM=none KEY_PEM=none VER=3.48
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && mkdir -m 777 /v2raybin \ 
  && cd /v2raybin \
- && curl -L -H "Cache-Con#trol: no-cache" -o v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
+ && curl -L -H "Cache-Control: no-cache" -o v2ray.zip https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip \
  && unzip v2ray.zip \
  && mv /v2raybin/v2ray-v$VER-linux-64/v2ray /v2raybin/ \
  && mv /v2raybin/v2ray-v$VER-linux-64/v2ctl /v2raybin/ \
@@ -17,12 +16,11 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && rm -rf v2ray-v$VER-linux-64 \
  && chgrp -R 0 /v2raybin \
  && chmod -R g+rwX /v2raybin 
-
-# RUN mkdir -m 777 /v2ray
-
+ 
 ADD entrypoint.sh /entrypoint.sh
-ADD config.json /config.json
+
 RUN chmod +x /entrypoint.sh 
+
 ENTRYPOINT  /entrypoint.sh 
 
 EXPOSE 8080
