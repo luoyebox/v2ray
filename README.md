@@ -1,1 +1,4 @@
-部署v2ray ，uuid生成 https://www.uuidgenerator.net/
+v2ray 
+require two environment variables
+VER --->v2ray version
+UUID--->https://www.uuidgenerator.net/
