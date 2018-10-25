@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-# ENV CONFIG_JSON=none 
+ENV CONFIG_JSON=none 
 ENV CERT_PEM=none KEY_PEM=none VER=3.48
 
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
@@ -18,7 +18,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && chgrp -R 0 /v2raybin \
  && chmod -R g+rwX /v2raybin 
 
-RUN mkdir -m 777 /v2ray
+# RUN mkdir -m 777 /v2ray
 
 ADD entrypoint.sh /entrypoint.sh
 ADD config.json /v2ray/config.json
