@@ -1,5 +1,3 @@
-v2ray 
-
 wangyi2005/v2ray 
 
 require two environment variables
