@@ -14,5 +14,6 @@ unzip -o v2ray.zip
 # mv /v2ray/v2ray-linux-64/geosite.dat .
 
 chmod +x v2ray v2ctl
+
 sed -i "s/your_uuid/$UUID/g" config.json
 ./v2ray
