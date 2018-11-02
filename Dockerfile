@@ -1,7 +1,7 @@
 
 FROM alpine:latest
 
-ENV VER=3.50.2
+ENV VER=4.0
 
 #ENV CONFIG_JSON=none CERT_PEM=none KEY_PEM=none VER=3.35
 
