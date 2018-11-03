@@ -9,7 +9,7 @@ cd /v2ray
 wget -O v2ray.zip http://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip
 
 unzip v2ray.zip 
-
+rm v2ray.zip
 # mv /v2ray/v2ray-linux-64/v2ray .
 # mv /v2ray/v2ray-linux-64/v2ctl .
 # mv /v2ray/v2ray-linux-64/geoip.dat .
@@ -17,5 +17,4 @@ unzip v2ray.zip
 
 chmod +x v2ray v2ctl
 sed -i "s/your_uuid/$UUID/g" config.json
-rm -rf v2ray.zip
 ./v2ray
