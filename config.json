@@ -9,7 +9,9 @@
       "clients": [
         {
           "id": "your_uuid",
-          "alterId": 64
+          "alterId": 100,
+          "security" : "chacha20-poly1305",
+          "level" : 0
         }
       ]
     },
