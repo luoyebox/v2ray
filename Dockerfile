@@ -20,10 +20,11 @@ ENV VER=4.0
 # && chgrp -R 0 /v2raybin \
 # && chmod -R g+rwX /v2raybin 
 
-RUN mkdir -m 777 /v2ray
+RUN mkdir -m 777 /v2ray \
+&& mkdir -m 777 /v2ray/v2ray-linux-64 
 
 ADD entrypoint.sh /entrypoint.sh
-ADD config.json /v2ray/config.json
+ADD config.json /v2ray/v2ray-linux-64/config.json
 RUN chmod +x /entrypoint.sh 
 ENTRYPOINT  /entrypoint.sh 
 
