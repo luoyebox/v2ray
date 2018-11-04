@@ -11,7 +11,7 @@
           "id": "your_uuid",
           "alterId": 100,
           "security" : "chacha20-poly1305",
-          "level" : 0
+          "level" : 1
         }
       ]
     },
