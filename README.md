@@ -1,4 +1,4 @@
-wangyi2005/v2ray 
+clone from wangyi2005/v2ray 
 
 require two environment variables
 
@@ -6,9 +6,8 @@ VER --->v2ray version
 
 UUID--->https://www.uuidgenerator.net/
 
-doudoubinga/openshift 
+Modified somethings that I think need to be fixed.
 
-require one environment variables
 
-CONFIG_JSON
+
 
