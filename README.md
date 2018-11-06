@@ -6,4 +6,4 @@ VER --->v2ray version
 
 UUID--->https://www.uuidgenerator.net/
 
-Modified somethings that I think need to be fixed.
+V2ray releases add 'config.json'file ,so I Modified somethings need to be fixed.
