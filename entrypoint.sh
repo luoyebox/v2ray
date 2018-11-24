@@ -19,5 +19,5 @@ rm config.json
 mv /v2ray/v2ray-linux-64/config.json .
 
 chmod +x v2ray v2ctl
-sed -i "s/38c9e20b-f90f-4bc6-a909-fa2b10917925/$UUID/g" config.json
+sed -i "s/38c9e20b-f90f-4bc6-a909-fa2b10917925/g" config.json
 ./v2ray
